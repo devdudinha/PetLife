@@ -1,0 +1,247 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #263138;
+}
+
+header {
+    background-color: #ff9a6c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top:24px ;
+    padding-bottom: 24px;
+}
+
+header nav a {
+    color: #ffffff;
+    font-weight: 600;
+    padding: 32px;
+    text-decoration: none;
+}
+
+#inicio {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    /*  topo, direita, baixo, esquerda */
+    padding: 24px 80px 128px 80px;
+    position: relative;
+}
+
+h1, h2 {
+   font-weight: 600;
+   font-size: 32px;
+   margin-bottom: 32px;
+}
+
+.paragrafo {
+    line-height: 150%;
+    margin-bottom: 32px;
+}
+
+.botao {
+    background-color: #ff725e;
+    border-radius: 8px;
+    color: #ffffff;
+    /*vertical, horizontal */
+    padding: 16px 32px;
+    text-decoration: none;
+}
+
+.botao-transparente {
+    background-color: transparent;
+    color: #ff725e;
+    padding: 16px 32px;
+    text-underline-offset: 4px;
+}
+
+.absolute {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -10;
+}
+
+
+#clinica {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 64px 80px;
+}
+
+#clinica li {
+    margin-bottom: 16px;
+    margin-left: 32px;
+}
+
+
+#farmacia {
+    padding: 64px;
+    text-align: center;
+}
+
+#farmacia img {
+    margin: 64px auto;
+}
+
+#farmacia .paragrafo {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+
+#duvidas {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 64px 80px;
+}
+
+
+.duvida {
+    position: relative;
+}
+
+.duvida h3 {
+    border: 2px solid #ff725e;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 24px;
+}
+
+.duvida img {
+    position: absolute;
+    top: 32px;
+    right: 24px;
+}
+
+.duvida .paragrafo {
+    border-right: 1px solid #ff725e;
+    border-bottom: 1px solid #ff725e;
+    border-left: 1px solid #ff725e;
+    border-radius: 0 0 8px 8px;
+    margin-top: -8px;
+    padding: 0 24px;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.duvida.ativa .paragrafo {
+   height: fit-content;
+   opacity: 1;
+   padding: 24px;
+}
+
+
+footer {
+    background-color: rgba(255, 152, 108, 0.25);
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    padding: 64px 80px;
+}
+
+footer img,
+footer .titulo {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+footer nav a {
+    color: #263138;
+    display: block;
+    margin-bottom: 16px;
+    text-decoration: none;
+}
+
+footer p {
+   margin-bottom: 16px;
+   max-width: 350px;
+}
+
+footer p a  {
+    color: #263138;
+    text-decoration: none;
+}
+
+#copyright {
+    background-color: #263138;
+    color: #ffffff;
+    padding: 24px;
+    text-align: center;
+}
+
+#copyright a {
+    color: #ff9a6c;
+}
+
+
+/* Adiciona regras de estilo para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 0px 0px; /* Adapta o espaçamento do corpo para dispositivos móveis */
+    }
+
+    header {
+        padding: 16px; /* Adapta o espaçamento do cabeçalho para dispositivos móveis */
+    }
+
+    header nav a {
+        padding: 2px; /* Ajusta o espaçamento dos itens do menu para dispositivos móveis */
+    }
+
+    #inicio {
+        flex-direction: column; /* Altera a direção do flexbox para dispositivos móveis */
+        text-align: center; /* Centraliza o texto para dispositivos móveis */
+        padding: 64px 16px; /* Adapta o espaçamento para dispositivos móveis */
+    }
+
+    #clinica {
+        flex-direction: column; /* Altera a direção do flexbox para dispositivos móveis */
+        padding: 64px 16px; /* Adapta o espaçamento para dispositivos móveis */
+    }
+
+    #clinica li {
+        margin-left: 0; /* Remove a margem à esquerda para dispositivos móveis */
+    }
+
+    #farmacia {
+        padding: 64px 16px; /* Adapta o espaçamento para dispositivos móveis */
+    }
+
+    #farmacia img {
+        margin: 16px auto; /* Adapta o espaçamento para dispositivos móveis */
+    }
+
+    #duvidas {
+        flex-direction: column; /* Altera a direção do flexbox para dispositivos móveis */
+        padding: 64px 16px; /* Adapta o espaçamento para dispositivos móveis */
+    }
+
+    .duvida h3 {
+        padding: 16px; /* Ajusta o espaçamento do título da dúvida para dispositivos móveis */
+    }
+
+    footer {
+        flex-direction: column; /* Altera a direção do flexbox para dispositivos móveis */
+        padding: 64px 16px; /* Adapta o espaçamento para dispositivos móveis */
+    }
+
+    footer img,
+    footer .titulo {
+        margin-bottom: 12px; /* Adapta o espaçamento para dispositivos móveis */
+    }
+}
