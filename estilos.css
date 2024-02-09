@@ -206,12 +206,8 @@ footer p a  {
     header nav a {
         padding: 6px;
     }    
-  .botao {
-        flex-direction: column;
-    }
     .botao-transparente{
-        text-decoration: none;
-        flex-direction: column;
+       display: none;
     }
     #inicio {
         flex-direction: column;
