@@ -205,20 +205,22 @@ footer p a  {
 
     header nav a {
         padding: 6px;
+    }    
+    .botao-transparente{
+        text-decoration: none;
     }
-
     #inicio {
         flex-direction: column;
         text-align: center;
         padding: 48px 24px;
     }
+    .absolute {
+       display: none;
+    }
     #inicio img {
         width: 100%;
         width: 350px;
         height: 300px;
-    }
-    .absolute {
-        display: none;
     }
     #clinica {
         padding: 4px 2px;
